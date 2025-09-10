@@ -169,7 +169,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -413,7 +413,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1163,10 +1163,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -1490,7 +1548,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1498,8 +1556,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1523,7 +1581,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -5265,6 +5323,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1650265938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650265940}
+  - component: {fileID: 1650265939}
+  m_Layer: 0
+  m_Name: Orbit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1650265939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650265938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ace584c5fc7764184587ab19a650ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Satelite
+  SateliteSpeed: 10
+  SateliteAxis: {x: 0, y: 1, z: 0}
+  CenterObject: {fileID: 3647264812973746750}
+--- !u!4 &1650265940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650265938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.53848, y: 4.09875, z: 10.15295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915110828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,31 +5424,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.06
+      value: 0.412
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1
+      value: 0.556628
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5351,15 +5456,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5409,23 +5514,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_Name
       value: Venus
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.96
+      value: 0.792
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.92
+      value: -0.647372
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5433,15 +5550,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5481,23 +5598,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 122353700514815476, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_Name
       value: Uranus
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31686
+      value: 0.063372
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.81
+      value: -0.23800002
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.73
+      value: 0.082628004
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5505,15 +5634,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5553,19 +5682,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31686
+      value: 0.063372
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.03
+      value: 0.74262804
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5573,15 +5714,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5625,31 +5766,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.48
+      value: -0.69600004
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.01
+      value: 0.53862804
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5657,15 +5798,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5796,6 +5937,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 705507995}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8969049061258867035}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9062956960155544648}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6718996472431708397}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8959333663122580320}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9192160428022023208}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5624570870490289507}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8962006291354567617}
+    - targetCorrespondingSourceObject: {fileID: 6504260106226141804, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9012452386763816954}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9192160427994333990, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
       insertIndex: -1
@@ -5882,7 +6047,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6126,7 +6291,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -7269,8 +7434,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.764151, g: 0.025231415, b: 0.025231415, a: 1}
-        key1: {r: 0.8962264, g: 0.69496506, b: 0.080322154, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -10742,8 +10907,7 @@ TrailRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10765,7 +10929,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 10
+  m_Time: 5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -10774,7 +10938,7 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.2
+        time: 0.68000203
         value: 0
         inSlope: 0
         outSlope: 0
@@ -10944,7 +11108,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11188,7 +11352,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11938,10 +12102,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -12265,7 +12487,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -12273,8 +12495,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -12298,7 +12520,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -15843,29 +16065,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &5624570870490289507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 271733798935224243, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
+  m_PrefabInstance: {fileID: 2005668913724912282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6452512154211115994
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 5324648748452954623, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_Name
       value: Mercury
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.889
+      value: -0.641172
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15873,15 +16112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15926,23 +16165,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 345449975306571728, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_Name
       value: Neptune
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.86
+      value: -3.9720001
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15950,15 +16201,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15998,7 +16249,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 3647264812973746750}
     m_Modifications:
     - target: {fileID: 3454493862684676532, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16009,16 +16260,28 @@ PrefabInstance:
       value: Earth
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.65
+      value: 0.53000003
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2218
+      value: -0.55564
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16026,15 +16289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16125,7 +16388,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16369,7 +16632,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -17119,10 +17382,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -17446,7 +17767,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -17454,8 +17775,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -17479,7 +17800,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -21069,7 +21390,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21313,7 +21634,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -22063,10 +22384,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -22390,7 +22769,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -22398,8 +22777,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -22423,7 +22802,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -25968,6 +26347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &8959333663122580320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 474887725094652940, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+  m_PrefabInstance: {fileID: 1895502773544247593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8962006291354567605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26008,7 +26392,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26252,7 +26636,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -27002,10 +27386,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -27329,7 +27771,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -27337,8 +27779,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -27362,7 +27804,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -30906,6 +31348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &8962006291354567617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+  m_PrefabInstance: {fileID: 1851750051975566222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8969049061258867023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30946,7 +31393,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31190,7 +31637,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -31940,10 +32387,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -32267,7 +32772,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -32275,8 +32780,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -32300,7 +32805,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -35845,6 +36350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &8969049061258867035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+  m_PrefabInstance: {fileID: 6452512154211115994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9012452386763816942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35885,7 +36395,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36129,7 +36639,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -36879,10 +37389,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -37206,7 +37774,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -37214,8 +37782,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -37239,7 +37807,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -40784,6 +41352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &9012452386763816954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+  m_PrefabInstance: {fileID: 7361607433586691844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9062956960155544635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
@@ -40829,7 +41402,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41073,7 +41646,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -41823,10 +42396,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -42150,7 +42781,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -42158,8 +42789,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -42183,7 +42814,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -45728,6 +46359,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &9062956960155544648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+  m_PrefabInstance: {fileID: 1715847581005410199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9192160428022023194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9048923513470885421, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
@@ -45759,7 +46395,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46003,7 +46639,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.92156863, b: 0.72156864, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -46753,10 +47389,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -47080,7 +47774,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -47088,8 +47782,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.9371698, b: 0.8254717, a: 1}
+        key1: {r: 1, g: 0.9659655, b: 0.8632076, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -47113,7 +47807,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -50658,18 +51352,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
+--- !u!4 &9192160428022023208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5174897152987311015, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
+  m_PrefabInstance: {fileID: 750197711608087691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 3647264812973746749}
-  - {fileID: 6452512154211115994}
-  - {fileID: 1715847581005410199}
-  - {fileID: 8637012916313595929}
-  - {fileID: 1895502773544247593}
-  - {fileID: 750197711608087691}
-  - {fileID: 2005668913724912282}
-  - {fileID: 1851750051975566222}
-  - {fileID: 7361607433586691844}
   - {fileID: 1915110830}
+  - {fileID: 1650265940}
