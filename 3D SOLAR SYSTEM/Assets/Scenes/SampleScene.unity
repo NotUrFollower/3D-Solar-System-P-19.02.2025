@@ -5168,6 +5168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Rotation
   RotationSpeed: 10
   RotationAxis: {x: 0, y: 1, z: 0}
+--- !u!4 &939883802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8200904865343066847, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
+  m_PrefabInstance: {fileID: 5563492114482565433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5304,7 +5309,8 @@ Transform:
   m_LocalPosition: {x: 2.72, y: 0.2218, z: 0.31686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 939883802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &750197711608087691
@@ -5388,6 +5394,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9048923513470885421, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9192160428022023195}
+    - targetCorrespondingSourceObject: {fileID: 9048923513470885421, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9192160428022023203}
   m_SourcePrefab: {fileID: 100100000, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
 --- !u!1 &822505926936928829 stripped
 GameObject:
@@ -5462,6 +5471,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9062956960155544637}
+    - targetCorrespondingSourceObject: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9062956960155544644}
   m_SourcePrefab: {fileID: 100100000, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
 --- !u!1001 &1851750051975566222
 PrefabInstance:
@@ -5531,6 +5543,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 122353700514815476, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8962006291354567606}
+    - targetCorrespondingSourceObject: {fileID: 122353700514815476, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8962006291354567613}
   m_SourcePrefab: {fileID: 100100000, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
 --- !u!1001 &1895502773544247593
 PrefabInstance:
@@ -5600,6 +5615,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7729717545697013810, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8959333663122580309}
+    - targetCorrespondingSourceObject: {fileID: 7729717545697013810, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8959333663122580316}
   m_SourcePrefab: {fileID: 100100000, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
 --- !u!1001 &2005668913724912282
 PrefabInstance:
@@ -5685,6 +5703,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1055029517811039287, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5624570870490289496}
+    - targetCorrespondingSourceObject: {fileID: 1055029517811039287, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5624570870490289503}
   m_SourcePrefab: {fileID: 100100000, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
 --- !u!1 &3483329909548781259 stripped
 GameObject:
@@ -5791,6 +5812,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9192160427994333990, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3647264812973746756}
+    - targetCorrespondingSourceObject: {fileID: 9192160427994333990, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3647264812973746762}
   m_SourcePrefab: {fileID: 100100000, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
 --- !u!4 &3647264812973746750 stripped
 Transform:
@@ -6852,10 +6876,68 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 30
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -7179,7 +7261,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -7187,8 +7269,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0.764151, g: 0.025231415, b: 0.025231415, a: 1}
+        key1: {r: 0.8962264, g: 0.69496506, b: 0.080322154, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -7212,7 +7294,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -10705,7 +10787,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -10730,10 +10812,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -10745,13 +10827,25 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3647264812973746762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111265158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1001 &5563492114482565433
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1915110830}
     m_Modifications:
     - target: {fileID: 2125430140231488068, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_Name
@@ -10760,22 +10854,22 @@ PrefabInstance:
     - target: {fileID: 3659860581603058145, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: a955460ad46997d439d9c6bd436ae323, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 3659860581603058145, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_RenderingLayerMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8200904865343066847, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5741987
+      value: -3.2941988
       objectReference: {fileID: 0}
     - target: {fileID: 8200904865343066847, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4985023
+      value: 1.2767023
       objectReference: {fileID: 0}
     - target: {fileID: 8200904865343066847, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.3456564
+      value: 6.028796
       objectReference: {fileID: 0}
     - target: {fileID: 8200904865343066847, guid: 603196b27f07d8549a8460d535a4bb93, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15697,7 +15791,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -15722,10 +15816,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -15737,6 +15831,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5624570870490289503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822505926936928829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1001 &6452512154211115994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15805,6 +15911,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5324648748452954623, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8969049061258867024}
+    - targetCorrespondingSourceObject: {fileID: 5324648748452954623, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8969049061258867031}
   m_SourcePrefab: {fileID: 100100000, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
 --- !u!4 &6718996472431708397 stripped
 Transform:
@@ -15879,6 +15988,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 345449975306571728, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9012452386763816943}
+    - targetCorrespondingSourceObject: {fileID: 345449975306571728, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9012452386763816950}
   m_SourcePrefab: {fileID: 100100000, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
 --- !u!1001 &8637012916313595929
 PrefabInstance:
@@ -15952,6 +16064,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7001158038708723978, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8713463208888680873}
+    - targetCorrespondingSourceObject: {fileID: 7001158038708723978, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8713463208888680879}
     - targetCorrespondingSourceObject: {fileID: 730155931761744126, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 634520428}
@@ -20857,7 +20972,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -20882,10 +20997,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -20897,6 +21012,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8713463208888680879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713463208888680871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1 &8959333663122580307 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7729717545697013810, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
@@ -25789,7 +25916,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -25814,10 +25941,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -25829,6 +25956,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8959333663122580316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959333663122580307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!114 &8962006291354567605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30671,8 +30810,7 @@ TrailRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30716,7 +30854,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -30741,10 +30879,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -30756,6 +30894,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8962006291354567613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483329909548781259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!114 &8969049061258867023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35643,7 +35793,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -35668,10 +35818,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -35683,6 +35833,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8969049061258867031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490361987933010993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!114 &9012452386763816942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40570,7 +40732,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -40595,10 +40757,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -40610,6 +40772,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &9012452386763816950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538314831936025234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1 &9062956960155544635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
@@ -45502,7 +45676,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -45527,10 +45701,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -45542,6 +45716,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &9062956960155544644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062956960155544635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1 &9192160428022023194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9048923513470885421, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
@@ -50420,7 +50606,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.34280854, g: 0.20745817, b: 0.6981132, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -50445,10 +50631,10 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 1
     numCapVertices: 0
     alignment: 1
     textureMode: 0
@@ -50460,6 +50646,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &9192160428022023203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192160428022023194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659cdf882bd20a4dacc98eb7eb1869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailCleaner
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -50475,4 +50673,3 @@ SceneRoots:
   - {fileID: 1851750051975566222}
   - {fileID: 7361607433586691844}
   - {fileID: 1915110830}
-  - {fileID: 5563492114482565433}
