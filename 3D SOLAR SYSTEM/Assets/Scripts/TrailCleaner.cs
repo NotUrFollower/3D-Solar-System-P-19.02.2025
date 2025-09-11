@@ -5,7 +5,7 @@ public class TrailCleaner : MonoBehaviour
 {
     void Start()
     {
-        // очищаем хвост при запуске
+        // clean trail
         TrailRenderer trail = GetComponent<TrailRenderer>();
         if (trail != null)
         {

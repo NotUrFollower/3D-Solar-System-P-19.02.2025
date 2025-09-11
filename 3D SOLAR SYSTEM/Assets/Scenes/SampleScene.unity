@@ -5479,15 +5479,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 025af45ef2c49db4db7ed9a4489252d4, type: 3}
+  m_Script: {fileID: 11500000, guid: b8069879169c65f44b4060f11e5be49d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraZoom
-  planets: []
-  offset: {x: 0, y: 50, z: -100}
-  smoothTime: 0.3
+  m_EditorClassIdentifier: Assembly-CSharp::OrbitCamera
+  target: {fileID: 3647264812973746750}
+  distance: 50
   zoomSpeed: 10
-  minFOV: 20
-  maxFOV: 100
+  rotationSpeed: 200
+  minDistance: 10
+  maxDistance: 200
 --- !u!1 &1200406021
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,6 +5794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jupiter
       objectReference: {fileID: 0}
+    - target: {fileID: 9048923513470885421, guid: e45d44bb8e3138e46a6321e5124b1f3b, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5830,6 +5834,10 @@ PrefabInstance:
     - target: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_Name
       value: Venus
+      objectReference: {fileID: 0}
+    - target: {fileID: 627249080867142075, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 5959257370195702295, guid: d0479383486931a439e2819b1a8d6f41, type: 3}
       propertyPath: m_LocalScale.x
@@ -5921,6 +5929,10 @@ PrefabInstance:
     - target: {fileID: 122353700514815476, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_Name
       value: Uranus
+      objectReference: {fileID: 0}
+    - target: {fileID: 122353700514815476, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 6087686302504811410, guid: 4b8d98dc63d27624b8dee5244a2f9ed7, type: 3}
       propertyPath: m_LocalScale.x
@@ -6069,6 +6081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mars
       objectReference: {fileID: 0}
+    - target: {fileID: 7729717545697013810, guid: 891a044909f33d34da59d626bc9a3756, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6159,6 +6175,10 @@ PrefabInstance:
     - target: {fileID: 1055029517811039287, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
       propertyPath: m_Name
       value: Saturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055029517811039287, guid: ccc994c7c936935469e79e69b9e4bf61, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6265,6 +6285,10 @@ PrefabInstance:
     - target: {fileID: 9192160427994333990, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
       propertyPath: m_Name
       value: Sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192160427994333990, guid: cb5fc8c3e3f331c45965f9d0b1a8181c, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11349,6 +11373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mercury
       objectReference: {fileID: 0}
+    - target: {fileID: 5324648748452954623, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 5991390407550050905, guid: c2f4714503862134db1677e4a3dea13c, type: 3}
       propertyPath: m_LocalScale.x
       value: 24
@@ -11445,6 +11473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neptune
       objectReference: {fileID: 0}
+    - target: {fileID: 345449975306571728, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 3613457114870995510, guid: ced501c62a4865e4d92625eab8c51c1f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6000001
@@ -11532,6 +11564,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1576113800}
     m_Modifications:
+    - target: {fileID: 730155931761744126, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 3454493862684676532, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -11555,6 +11591,10 @@ PrefabInstance:
     - target: {fileID: 7001158038708723978, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001158038708723978, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7529152646260542606, guid: 7e9a3607c07c26d48823317fb9af1cc5, type: 3}
       propertyPath: m_LocalScale.x
